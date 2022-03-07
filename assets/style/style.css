@@ -1,0 +1,583 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+*{
+    padding: 0%;
+    margin: 0%;
+}
+body{
+background-color: whitesmoke;
+overflow-x: hidden;
+scroll-behavior: smooth;
+}
+                 /*header*/
+
+#header-nav{
+    height: 7vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 35%;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 43px 17px rgba(153,153,153,1);
+}
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+#burgerimg{
+    object-fit: cover;
+    height: 30px;
+    width: 30px;
+  }
+
+  #burger{
+    float: right;
+    height: 20px;
+    width: 20px;
+    padding-right: 3vw;
+    padding-top: 1vh ;
+    display: none;
+  
+  }
+#header-logo{
+   height:5vh;
+   width: 8vw;
+}
+#logo-div{
+    margin-top: 1vh;
+    display: inline-block;
+    margin-left: 3vw;
+
+}
+#header-ul{
+    position: relative;
+    text-align: right;
+    padding-right: 5vw; 
+}
+.header-li{
+    margin-top: 2vh;
+    list-style: none;
+    display: inline-block;
+    border-radius: 30px;
+}
+.header-a{
+    text-decoration: none ;
+    padding: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #f9e45b;
+    font-size: 3vh;
+}
+                    /* slider*/
+
+ #img{
+    background-image: url("task-slide1.jpg");
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-size: 10vh;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+ }
+ #up{
+     top: -10vh;
+     position: relative;
+     display: inline-block;
+ }
+
+ .container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container p {
+    font-size: 3rem;
+    padding: 0.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    overflow: hidden;
+  }
+  .container p span.typed-text {
+    font-weight: normal;
+    color: #f9e45b;
+  }
+  .container p span.cursor {
+    display: inline-block;
+    background-color: #ccc;
+    margin-left: 0.1rem;
+    width: 3px;
+    animation: blink 1s infinite;
+  }
+  .container p span.cursor.typing {
+    animation: none;
+  }
+  @keyframes blink {
+    0%  { background-color: #ccc; }
+    49% { background-color: #ccc; }
+    50% { background-color: transparent; }
+    99% { background-color: transparent; }
+    100%  { background-color: #ccc; }
+  }
+                   /*why choose us*/
+       
+#chooseus{
+    height: 100vh;
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    position: relative;
+    top: 10vh;
+    text-align: center;
+    border-radius: 5%;
+
+}  
+
+#chooseus-cont{
+    height: 40vh;
+    width: 80%;
+    margin: auto;
+    background-color: white;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    column-gap: 5vw;
+    row-gap: 5vw;
+    position: relative;
+    top: 10vh;
+    border-radius: 300px;
+}
+.choose-boxes{
+    background-color: whitesmoke;
+    height: 45vh;
+    width: 20vw;
+    border-radius: 5%;
+    color: #1b4d89;
+    text-align: center;
+    box-shadow: 0px 0px 30px -4px rgb(0 0 0 / 30%);
+}
+.choose-boxes:hover{
+    color: white;
+    background-color: #f9e45b;
+    transform: scaleY(1.05);
+}
+#choose-heading{
+    padding-top: 15vh;
+    font-size: 7vh;
+    font-family: 'Roboto',sans-serif;
+    color: #1b4d89;
+    padding-bottom: 5vh;
+}
+.box-icons{
+    height: 150px;
+    width:  150px;
+}
+.lorem{
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+.head32{
+    padding-bottom: 1vh;
+}
+
+
+                             /*testimonial*/
+
+
+                             .testcenter{
+                                 top: 20vh;
+                               
+                                height: 100vh;
+                                width: 100%;
+                                position: relative;
+                                display: grid;
+                                grid-template-columns:auto;
+                                background: linear-gradient(180deg, whitesmoke 50%, #1b4d89 50%);
+                                text-align: center;
+                              }             
+                             .slide{
+                                 margin: auto;
+                                 height: 60vh;
+                                 width: 60vw;
+                                object-fit: contain;
+                               
+                             }     
+                             #customertxt{
+                                 font-size: 7vh;
+                                color: #f9e45b;
+                                padding-top: 5vh;
+                                font-family: 'Roboto',sans-serif;
+                             }     
+                             
+
+                             /*footer*/
+
+.footer{
+    height: 40vh;
+    background-color: #093265 ;
+    padding-top: 20vh;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    box-shadow: 0px 0px 43px 17px rgba(153,153,153,1);
+}
+#footer-logo{
+    position: relative;
+    height: 5vh;
+    width: 8vw;
+    top: 5vh;
+   
+}
+
+.section1{ width:25vw; text-align: center;}
+.section2{ width:25vw; text-align: center;}
+.section3{ width:25vw; text-align: center;}
+.section4{ width:25vw; text-align: center;}  
+
+#section1txt{font-family:'Roboto',sans-serif; color: #f9e45b; position: relative; top: 10vh; font-size: 3vh; padding-left: 2vh;}
+.section2txt{font-family:'Roboto',sans-serif; color: #f9e45b; position: relative; top: 10vh; font-size: 5vh; padding-left: 5vh;}
+.section3txt{font-family:'Roboto',sans-serif; color: #f9e45b; position: relative; top: 10vh; font-size: 5vh; padding-left: 5vh;}
+#section4txt{font-family:'Roboto',sans-serif;
+     color: #f9e45b;
+      position: relative;
+       top: 5vh;
+        text-decoration: underline;
+          font-size: 5vh;  font-size: 5vh; 
+    padding-left: 5vh;}
+
+.link-head{
+    top: 5vh;
+    font-size: 5vh;
+    padding-top: -2vh;
+    text-decoration: underline;
+}
+.section2txt li{
+    padding-bottom: 2vh;
+    list-style: none;
+    font-size: 3vh;
+}
+.section3txt li{
+    padding-bottom: 2vh;
+    list-style: none;
+    font-size: 3vh;
+}
+#footer-form{
+    position: relative;
+    top: 7vh;
+    
+}
+
+
+
+
+
+
+
+                              
+         /*RESPONSIVE MOBILE HEADER*/
+
+
+
+
+        /* media query for entire site*/
+
+
+        /*menu and body*//*mobiles*/
+        @media only screen 
+        and (min-device-width: 280px) 
+        and (max-device-width: 667px) {
+
+
+            html{
+                overflow-x: hidden;
+            }
+
+            /*WHY CHOOSE US*/
+
+            #chooseus-cont{
+                grid-template-columns: auto;
+                height: 100vh;
+                padding-bottom: 20vh;
+                padding-top: -20vh;
+            }
+            #header-nav{
+                height: 7vh;
+            }
+            #header-logo{
+                height:5vh;
+                width: 30vw;
+             }
+            #chooseus-cont{
+                height: 100vh;
+                border-radius: 0px;
+                width: 100%;
+            }
+            #burger{
+                display: block;
+                margin-top: -92vh;
+                cursor: pointer;
+                margin-right: 20vw;
+              }
+
+              .navlinks{
+                transform:translateX(100%) ;
+              }
+              .newClass{
+                transform: translateX(0%);
+              }
+              .newClass2{
+                transform: translateX(100%);
+              }
+            
+            
+               
+                #nav{
+                    right: 0px;
+                    display: grid;
+                    z-index: 12;
+                    position: relative;
+                    height: 92vh;
+                    top: 8vh;
+                    background-color: whitesmoke;
+                    transition: transform 0.5s ease-in;
+                  }
+            
+            #chooseus{
+                height: 220vh;
+                width: 100%;
+                border-radius: 0px;
+                margin-top: -10vh;
+            }
+           
+            .choose-boxes{
+                height: 50vh;
+                width: 80vw;
+        }
+
+                                    /*testimonial*/
+
+
+                                    .slide{
+                                        height: 50vh;
+                                        width: 90vw;
+                                       padding-bottom: 10vh;
+                                       margin-top: -15vh;
+                                    }
+                                    .testcenter{
+                                        top: 0;
+                                        height: 70vh;
+                                    }
+                                    #customertxt{
+                                        font-size: 6vh;
+                                        padding-top: 1vh;
+                                    }
+
+                                    /*footer*/
+
+                                    .footer{
+                                        grid-template-columns: auto ;
+                                        height: 70vh;
+                                        padding-top: 0%;
+                                        padding-bottom: 10vh;
+                                    }
+
+   .section2{
+       display: none;
+   }                                 
+
+   .section3{
+    display: none;
+}        
+.section1{ padding-top:0;width:100vw; display:grid; justify-content: center;}
+
+.section4{ padding-top:0;width:100vw; display:grid; justify-content: center;}
+
+#footer-form{
+    position: relative;
+    top: 5vh;
+    
+}
+#footer-logo{
+    position: relative;
+    height: 10vh;
+    width: 60vw;
+    padding-left: 20vw;
+   
+}
+
+#section1txt{
+    top: 5vh;
+}
+.link-head{
+    top: 5vh;
+}
+        }
+
+
+
+                               /*tablets and short monitors*/
+
+                   @media only screen 
+                   and (min-device-width: 670px)
+                   and (max-device-width: 900px) {
+
+
+                                        /*header*/
+
+                                        #header-nav{
+                                            display: grid;
+                                            grid-template-columns: auto auto;
+                                            column-gap: 25px;
+                                           
+                                        }
+
+                                        /*whychooseus*/
+
+                                        #chooseus{
+                                            width: 90%;
+                                            padding-top:0;
+                                            height: 120vh;
+                                        }
+                                       
+                                        .choose-boxes{
+                                            height: 60vh;
+                                            width: 25vw;
+                                    }
+
+
+                                    /*footer*/
+
+                                    #section1txt {
+                                        
+                                        font-size: 2vh;
+                                    }
+                                
+                                #section4txt {
+                                    padding-left: 0%;
+                                }
+                   }
+
+                       /*mid monitors*/
+
+                       @media only screen 
+                       and (min-device-width: 900px)
+                       and (max-device-width: 1024px) 
+                        {
+
+                                               /*header*/
+
+                                               #header-nav{
+                                                display: grid;
+                                                grid-template-columns: auto auto;
+                                                column-gap: 25px;
+                                               
+                                            }
+    
+                                            /*whychooseus*/
+    
+                                            #chooseus{
+                                                width: 90%;
+                                                padding-top:0;
+                                                height: 120vh;
+                                            }
+                                           
+                                            .choose-boxes{
+                                                height: 60vh;
+                                                width: 25vw;
+                                        }
+    
+    
+                                        /*footer*/
+    
+                                        #section1txt {
+                                            
+                                            font-size: 2vh;
+                                        }
+                                    
+                                    #section4txt {
+                                        padding-left: 0%;
+                                    }
+                       }
+
+
+                       @media only screen 
+                       and (min-device-width: 1440px)
+                        {
+
+
+                                                              /*footer*/
+    
+                                                              #section1txt {
+                                            
+                                                                font-size: 2vh;
+                                                            }
+                                                        
+                                                        #section4txt {
+                                                            padding-left: 0%;
+                                                        }
+
+                                                        .container p {
+                                                            font-size: 6rem;
+                                                        }
+
+
+
+
+
+
+
+
+                                                        /*whychooseus*/
+
+                                                        
+.lorem {
+    font-size: 2vh;
+}
+                                           }
+
+
+
+
+                                           @media only screen 
+                                           and (min-device-width: 2560px)
+                                            {
+
+                                                /*footer*/
+                                                #message{
+                                                    width: 20vw;
+                                                    height: 3vh;
+                                                }
+                                                #email{
+                                                    width: 10vw;
+                                                    height: 3vh;
+                                                }
+                                                .footer button{
+                                                    padding: 2vh;
+                                                }
+                                                #footer-form {
+                                                font-size: 3vh;
+                                                }
+
+                                                /*why us*/
+
+                                                .lorem{
+                                                    font-size: 2.5vh;
+                                                }
+
+
+                                                /*home*/
+                                                
+.container p {
+    font-size: 7rem;
+}
+                                            }
+                   

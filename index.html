@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>VAYUZ</title>
+    <link rel="stylesheet" href="assets/style/style.css">
+</head>
+<body>
+    <header>
+        <div id="img">
+
+          <div class="container">
+            
+            <p>WE ARE VAYUZ <br>WE ARE INTO <br><span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+          </div>
+        </div>
+        <nav id="header-nav" >
+            <div id="logo-div"><img id="header-logo" src="assets/images/task-logo.png"></div>
+            <div class="header-ul">
+            <ul id="nav"class="navlinks">
+                <li class="header-li"><a class="header-a" onclick="myFunction3()"  href="#">HOME</a></li>
+                <li class="header-li"><a class="header-a" onclick="myFunction3()" href="#">STORE</a></li>
+                <li class="header-li"><a class="header-a" onclick="myFunction3()" href="#testimonial">TESTIMONIAL</a></li>
+                <li class="header-li"><a class="header-a" onclick="myFunction3()" href="#chooseus">ABOUT</a></li>
+                <li class="header-li"><a class="header-a" onclick="myFunction3()" href="#23footer">CONTACT</a></li>
+            </ul>
+            <div id="burger">
+              <a   onclick="myFunction2()">
+                <img id="burgerimg" src="assets/images/burger.png">
+              </a>
+            </div>
+        </div>
+        </nav>
+      
+        
+
+    </header>
+    <main>
+        <div id="chooseus">
+          <p id="choose-heading">WHY CHOOSE US</p>
+          <div id="chooseus-cont">
+            <div class="choose-boxes"><img class="box-icons" src="assets/images/choose1.png"><h1 class="head32">headhada32</h1> <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure distinctio cupiditate id esse aspernatur saepe quae necessitatibus impedit! Ut, aspernatur! Totam, impedit! Aut, consequuntur!</p></div>
+            <div class="choose-boxes"><img class="box-icons" src="assets/images/choose2.png"><h1 class="head32">headhada32</h1> <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure distinctio cupiditate id esse aspernatur saepe quae necessitatibus impedit! Ut, aspernatur! Totam, impedit! Aut, consequuntur!</p></div>
+            <div class="choose-boxes"><img class="box-icons" src="assets/images/choose3.png"><h1 class="head32">headhada32</h1> <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure distinctio cupiditate id esse aspernatur saepe quae necessitatibus impedit! Ut, aspernatur! Totam, impedit! Aut, consequuntur!</p></div>
+          </div>
+        </div>
+
+
+
+<div id="testimonial">
+        <div class="testcenter">
+          <p id="customertxt">customer testimonial</p>
+          <div>
+          <img class="slide" src="assets/images/customer1.jpg">
+          <img class="slide" src="assets/images/customer2.jpg">
+          <img class="slide" src="assets/images/customer3.jpg">
+        </div>
+      
+
+        
+      </div>
+        
+    </main>
+    <footer id="23footer">
+    
+      <div class="footer">
+
+        <div class="section1"><img id="footer-logo" src="assets/images/task-logo2.png"> <p id="section1txt">We are a full stack product development company. We are into Mobile App, Website Development, Big data and marketing.</p></div>
+        <div class="section2"><p class="section2txt link-head">QuickLInks</p><ul class="section2txt"><li>HOME</li><li>TESTIMONIAL</li><li>WHY-US</li></ul></div>
+        <div class="section3"><p class="section3txt link-head">RANDOM LINKS</p><ul class="section3txt"><li>OUR company</li><li>RANDOM</li></ul></div>
+        <div class="section4">
+          <p id="section4txt">Contact Us</p>
+  
+          <form id="footer-form" action="#" method="post">
+  
+            <input id="email" type="text" name="email" placeholder="Email"><br>
+            <br>
+            <textarea  id="message" name="message" placeholder="Message"></textarea><br>
+            <br>
+            <button>Send</button>
+  
+          </form>
+  </div>
+      </div>
+    </footer>
+
+
+
+    <script>
+
+        /*slider*/
+        const typedTextSpan = document.querySelector(".typed-text");
+const cursorSpan = document.querySelector(".cursor");
+
+const textArray = ["Mobile-dev", "Web-dev", "Big-data", "marketing"];
+const typingDelay = 200;
+const erasingDelay = 100;
+const newTextDelay = 2000; // Delay between current and next text
+let textArrayIndex = 0;
+let charIndex = 0;
+
+function type() {
+  if (charIndex < textArray[textArrayIndex].length) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingDelay);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+  	setTimeout(erase, newTextDelay);
+  }
+}
+
+function erase() {
+	if (charIndex > 0) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+    charIndex--;
+    setTimeout(erase, erasingDelay);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+    textArrayIndex++;
+    if(textArrayIndex>=textArray.length) textArrayIndex=0;
+    setTimeout(type, typingDelay + 1100);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+  if(textArray.length) setTimeout(type, newTextDelay + 250);
+});
+
+
+
+
+
+                               /*testimonial*/
+
+                               var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("slide");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000);
+}
+
+                            /*header*/
+
+
+                            window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("header-nav");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+
+                     /*mobile header*/
+
+
+                     function myFunction2() {
+               if( document.getElementById('nav').classList.contains("navlinks")){
+                     document.getElementById('nav').classList.toggle("newClass");}         
+}
+            function myFunction3(){
+              if (document.getElementById('nav').classList.contains("newClass")) {
+                document.getElementById('nav').classList.toggle("newClass2");
+
+                if ( document.getElementById('nav').classList.contains("newClass2")) {
+                  document.getElementById('nav').classList.remove("newClass2");
+              document.getElementById('nav').classList.add("navlinks");
+              myFunction2().click
+             
+            }
+              }
+
+            }
+
+                            
+
+
+    </script>
+</body>
+</html>
